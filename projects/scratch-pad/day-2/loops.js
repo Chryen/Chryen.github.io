@@ -12,7 +12,9 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
-  
+  for (var i = 0; i < array.length; i++){   // loop over array and print values
+      console.log(array[i]);
+  }
   
   
   
@@ -23,9 +25,11 @@ function printArrayValues(array) {
  * Given an input Array, loop backwards over the Array and print its values 
  * using console.log().
  */
-function printArrayValuesInReverse(array) {
+function printArrayValuesInReverse(array) { 
   // YOUR CODE BELOW HERE //
-  
+  for (var i = array.length - 1; i > -1; i--){      //loop backwards over Array
+      console.log(array[i]);
+  }
   
   
   
@@ -37,7 +41,7 @@ function printArrayValuesInReverse(array) {
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
+  return Object.keys(object);       // return Array containing Object keys
   
   
   
@@ -50,7 +54,9 @@ function getObjectKeys(object) {
  */
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
+  for (var key in object){      // loop over Object print its keys
+      console.log(key);
+  }
   
   
   
@@ -62,7 +68,7 @@ function printObjectKeys(object) {
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
+  return Object.values(object);     // return an array with values of object
   
   
   
@@ -75,7 +81,10 @@ function getObjectValues(object) {
  */
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
+  for (var key in object){          // loop over object and print its values
+      console.log(object[key]);
+  }
+
   
   
   
@@ -87,7 +96,7 @@ function printObjectValues(object) {
  */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
-  
+  return Object.getOwnPropertyNames(object).length;     // return the length of its key/value pairs
   
   
   
@@ -100,8 +109,11 @@ function getObjectLength(object) {
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+  var obj = Object.values(object).reverse();        // loop object in reverse and print values
+  for(var i = 0; i < obj.length; i++){
+    console.log(obj[i]);
+  }
+
   
   
   // YOUR CODE ABOVE HERE //
