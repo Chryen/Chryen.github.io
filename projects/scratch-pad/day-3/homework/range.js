@@ -23,8 +23,18 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
+    var arr = [];           // create array literal for storing new elements
+    if(start < end){    
+        for(var i = start; i <= end; i++){
+            arr.push(i);    // loop through the range from lowest number to highest number, while pushing element into an array
+        }
+    } else{
+        for(var i = start; i >= end; i--){
+            arr.push(i);    // loop through the range from highest to lowest
+        }
+    }
+    return arr;             // returns the array from before with range
+
     
     
     // YOUR CODE GOES ABOVE HERE //

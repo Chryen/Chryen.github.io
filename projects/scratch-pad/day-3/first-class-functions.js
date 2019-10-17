@@ -13,7 +13,9 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    return function(given){
+        return given > base; // return a function that tests if given value is greater than base
+    }
     
     
     
@@ -27,6 +29,9 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
+    return function(given){
+        return given < base; // return a function that tests if given value is less than base
+    }
     
     
     
@@ -41,7 +46,9 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
+    return function(givenString){
+        return givenString.toLowerCase().startsWith(startsWith.toLowerCase());  // return function that tests whether given string starts with StartsWith
+    }
     
     
     
@@ -55,7 +62,10 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
+    return function(givenString){
+        return givenString.toLowerCase().endsWith(endsWith.toLowerCase()); // return function that tests whether given string ends with EndsWith
+}
+
     
     
     
@@ -71,7 +81,12 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
+    var arr = [];
+    for(var i = 0; i < strings.length; i++){
+        arr.push(modify(strings[i]));  // modify each element in array and adds a new element to another array
+        
+    }
+    return arr;
     
     
     
@@ -89,8 +104,15 @@ function modifyStrings(strings, modify) {
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    
-    
+    var j = 0;
+    for(var i = 0; i < strings.length; i++){
+        if(test(strings[i])){
+            j += 0;
+        } else {
+            j++;
+            }   
+    }                   // loops through test function while tracking if any fails(adds 1 to j)
+    return j === 0;     // if value is not 0, returns false for the overall function
     
     
     // YOUR CODE ABOVE HERE //
