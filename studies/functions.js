@@ -46,13 +46,14 @@ function isNum(num){    // Local scope
 }
 
 // 7. Closures //
-var globalVariable = 1;
-function(){
-    var funcVariable = 2;   // No Closure
-    return funcVariable;
-}
-function(){
-    var funcVariable = 2 + globalVariable;  // Closure
-    return funcVariable;
-}
+/* var globalVariable = 1;
+ * function(){
+ *   var funcVariable = 2;   // No Closure
+ *   return funcVariable;
+ *  }
+ * function(){
+ *   var funcVariable = 2 + globalVariable;  // Closure
+ *   return funcVariable;
+ *  }
+ */
 

@@ -22,7 +22,7 @@ console.log(1 - 1);     // subtraction
 console.log(1 * 1);     // multiplication
 console.log(1 / 1);     // division
 console.log(1 % 1);     // modulo (returns remainder)
-z = z + 1;
+var z = z + 1;
 z++;    // same as above, using unary ++
 z = z - 1;
 z--;    // same as above, using unary --

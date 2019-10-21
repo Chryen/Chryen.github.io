@@ -17,7 +17,7 @@ var city = 'New Orleans';
 
 if(city === 'New Orleans'){
     // block of code executed if condition is true
-} else if(city === 'New York'{
+} else if(city === 'New York'){
     // block of code executed if condition is true the previous condition is false
 } else{
     // block of code executed if all other conditions are false
@@ -33,13 +33,13 @@ if(city === 'New Orleans'){
 var color = 'red';
 
 switch(color){
-    case 'orange';
+    case 'orange':
     // block of code executed if color is orange
     break;
-    case 'red';
+    case 'red':
     // block of code executed if color is red
     break;
-    case 'yellow';
+    case 'yellow':
     // block of code executed if color is yellow
     break;
 }

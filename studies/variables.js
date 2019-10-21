@@ -46,7 +46,7 @@ myVariable = "someString";
  */
 
 // Not allowed! //
-const myConstName;
+// const myConstName;
 
 // initialization //
 const myConstName = 'chris';
@@ -64,7 +64,7 @@ console.log(myConstName); // prints => chris
 // An example of let being used inside a block //
 const city = 'Harvey';
 if(city === 'Harvey'){
-    console.log(onlyAvailableInsideIfBlock); // prints undefined, let is hoisted to here
+    // console.log(onlyAvailableInsideIfBlock); // prints undefined, let is hoisted to here
     
     var availableOutsideIfBlock = 'foo';
     let onlyAvailableInsideIfBlock = 'bar';
@@ -80,11 +80,11 @@ if(city === 'Harvey'){
  * Hoisting 
  */
 
-function (weather){
+function day(weather){
     // msg not available here, because it's scoped to the if-else block
     if(weather === 'sunny'){
         // if sunny
-        console.log(msg): // throws error
+        console.log(msg); // throws error
         const msg = 'Nice day, eh?';
         console.log(msg); // prints Nice day, eh?
     } else {
