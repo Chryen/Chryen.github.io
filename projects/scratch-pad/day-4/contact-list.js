@@ -65,7 +65,7 @@ function makeContactList() {
             return contact;         // returns contact if full name appears
         },
         removeContact: function(contact){
-            for(let i = 0; i < contacts.length; itt){
+            for(let i = 0; i < contacts.length; i++){
                 if(contacts[i] === contact){
                     return contacts.splice(i,1);
                 }
