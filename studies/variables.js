@@ -6,13 +6,13 @@
 * Boolean, Array, Object or another data-type.  Variables are called so because once created, we
 * can CHANGE the value (and type of value) to which they point.
 *
-* To create a variable we use the keyword, var, followed by a name (id or alias) for our
+* 1. To create a variable we use the keyword, var, followed by a name (id or alias) for our
 * variable.
 *
-* There are 2 phases of using variables: declaration and initialization (or assignment).
+* 2. There are 2 phases of using variables: declaration and initialization (or assignment).
 */
 
-// declaration //
+// 1. declaration //
 var myName;
 
 /*
@@ -21,7 +21,7 @@ var myName;
 */
 console.log(myName); // prints => undefined
 
-// initialization or assignment //
+// 2. initialization or assignment //
 myName = 'john';
 console.log(myName); // prints => john
 
@@ -71,7 +71,7 @@ if(city === 'Harvey'){
 }
 
 /*
- * BLOCK SCOPED & HOISTING:
+ * 4. BLOCK SCOPED & HOISTING:
  * 
  * As mentioned before in the constants section, constants are block scoped.  This means they are
  * pinned to the code block in which they're declared/assigned.  Constants are not hoisted 
