@@ -18,6 +18,8 @@
  * 4. Array
  * 5. Object
  * 6. Function
+ * 
+ * Infinity/-infinity
  */
 
 // 1. Number : Numeric data //
@@ -100,6 +102,10 @@ console.log(add(1,4));
 // 7. undefined //
 var something;
 something;  // undefined since nothing is assigned
+/*
+ * A variable that has not been assigned anything is undefined.  If a value is not assigned 
+ * in an array or object, the value is also undefined.
+ */
 
 /*
  * 
@@ -107,10 +113,19 @@ something;  // undefined since nothing is assigned
 // 8. null //
 var something = null;
 console.log(something); // prints null
+/*
+ * We can assign a null value to a variable strictly using the null keyword.  Null represents
+ * a nonexistent or empty value.  Unlike undefined, we are explictely telling the javascript
+ * interpreter that the variable has no value.
+ */
 
 // 9. NaN: Not a Number //
 isNaN('hello')  // true
 isNaN(4) // false
+/*
+ * This property represents that a value is not a legal number.  As seen in the example above, 
+ * we can use isNaN() to check if a value is a NaN value.
+ */
 
 /*
  * Simple data-types are atomic/immmutable.  They do not hold, collect or aggregate other values.  
@@ -120,6 +135,42 @@ isNaN(4) // false
  * or passing, complete data-types are passed by reference.
  */
 
+/*
+ * To further the distinction between primitive values vs complex values and how they are stored
+ * in or referenced by variables.  Primitive types are copied, complex types are copied by reference
+ */
+
+// Copy by Value //
+var a = 1;
+var b = a;  // the value stored in a is copied into b
+b = 2;  // changing the value at b does not affect what is stored at a
+console.log(a)  // prints 1
+
+// Copy by reference //
+var a = {one: 'foo'};
+var b = a; // the value stored in b is a reference to the value stored in a - they both point to same object
+b.one = 'bar';  // changing the value at b affects all references because the value is reference to the same object
+console.log(a.one)  // prints 'bar'
+
+/*
+ * Infinity is a numeric value that represents positive infinity.  -Infinity is a numeric value that
+ * represents negative infinity. 
+ */
+
+// Infinity //
+console.log(Infinity);
+console.log(Infinity + 1);
+console.log(1/0);
+/*
+ * Console logs will print out Infinity
+ */
+
+// -Infinity //
+console.log(-Infinity);
+console.log(Math.log(0));
+/*
+ * Console logs will print out -Infinity
+ */
 
 
 

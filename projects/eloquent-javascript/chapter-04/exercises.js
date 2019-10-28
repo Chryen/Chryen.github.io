@@ -63,12 +63,12 @@ function arrayToList(array) {
 ////////////////////////////////////////////////////////////////////////////////
 
 function listToArray(list) {
-    var result = [];
+    var result = [];    // empty array to hold array of list
     while(list){
         result.push(list.value);
-        list = list.rest;
+        list = list.rest;   // pushes all elements in list to new array
     }
-    return result;
+    return result;  // return array
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ function listToArray(list) {
 function prepend(value, list) {
     return{
         value,
-        rest: list
+        rest: list      // return value, rest: list for array to list function
     }
 
 }
@@ -88,7 +88,7 @@ function prepend(value, list) {
 ////////////////////////////////////////////////////////////////////////////////
 
 function nth(list, index) {
-    return listToArray(list)[index];
+    return listToArray(list)[index];    // returns function listToArray with argument list with index taken from parameter
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -96,19 +96,19 @@ function nth(list, index) {
 ////////////////////////////////////////////////////////////////////////////////
 
 function deepEqual(value1, value2) {
-    if(value1 === value2){
+    if(value1 === value2){  // if value2 and value2 strictly equals eachother return true
         return true;
-    } else if((typeof value1 === 'object' && value1 !== null) && (typeof value2 === 'object' && value2 !== null)){
-        if(Object.keys(value1).length !== Object.keys(value2).length){
-            return false;
+    } else if((typeof value1 === 'object' && value1 !== null) && (typeof value2 === 'object' && value2 !== null)){  // set condtions for object
+        if(Object.keys(value1).length !== Object.keys(value2).length){  // if object is not empty
+            return false;   // returns false
         }
-        for(var key in value1){
-            if(value2.hasOwnProperty(key)){
-                if(! deepEqual(value1[key], value2[key])){
-                    return false;
+        for(var key in value1){ // for in loop for object value1
+            if(value2.hasOwnProperty(key)){ // if value2 contains key
+                if(! deepEqual(value1[key], value2[key])){  
+                    return false;   // if key does not deeply equal for value1 and value2 return false
                 }
             } else{
-                return false;
+                return false; // return false if value2 does not have a key
             }
         }
          return true;

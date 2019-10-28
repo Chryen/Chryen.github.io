@@ -15,13 +15,18 @@
 
 // 1. Assignment operators //
 var myName = 'Chris';   // assign myName by using '='
+var x = 1;
+var y = 2;
+x+= y;               // addition assignment
+x -= y;               // subtraction assignment
+x *= y;               // multiplication assignment
 
 // 2. Arithmetic operators //
-console.log(1 + 1);     // addition
-console.log(1 - 1);     // subtraction
-console.log(1 * 1);     // multiplication
-console.log(1 / 1);     // division
-console.log(1 % 1);     // modulo (returns remainder)
+console.log(1 + 1);     // addition prints 2
+console.log(1 - 1);     // subtraction prints 0
+console.log(1 * 1);     // multiplication prints 1
+console.log(1 / 1);     // division prints 1
+console.log(1 % 1);     // modulo (returns remainder) prints 0
 var z = z + 1;
 z++;    // same as above, using unary ++
 z = z - 1;
@@ -57,7 +62,11 @@ console.log(getFee(true));  // prints '2.00'
 console.log(getFee(false)); // prints '10.00'
 /*
  * This operator takes three operands, hence ternary.  This operator is 
- * frequently used as a shortcut for the if statement.
+ * frequently used as a shortcut for the if statement.  By following the
+ * example above (condition ? true : false), the condition is set on the
+ * first part before the question mark.  If the condition is true, the
+ * second part(between the question mark and colon) will be returned.  If
+ * false, the third part will be returned. 
  */
 
 

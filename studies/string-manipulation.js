@@ -2,7 +2,9 @@
  * STRING MANIPULATION:
  * 
  * String manipulation allows us to create and modify words or sentences.  By using 
- * an array, we can use different string methods to add and remove characters.
+ * an array, we can use different string methods to add and remove characters.  Methods
+ * such as, push(), unshift(), pop(), shift() and many more, allow us to manipulate 
+ * elements in an array.
  * 
  * 1. With operators
  * 2. With string methods
@@ -41,3 +43,31 @@ console.log(message);       // prints 'Hello, World!';
  * There are many other ways to manipulate a string.  These are only some of the string methods that
  * can be used to do so.
  */
+
+/*
+ * Below are some examples of string methods that have been frequently used in class so far.
+ */
+
+var array = ['a','b','c'];
+
+// .push() //
+array.push('d');    // add d to end of array
+console.log(array); // prints ['a','b','c','d']
+
+// .unshift() //
+array.unshift('x'); // add x to beginning of array
+console.log(array); // prints ['x','a','b','c','d']
+
+// .pop() //
+array.pop();       // remove element at end of array
+console.log(array); // prints ['x','a','b','c']
+
+// .shift() //
+array.shift();       // remove element at beginning of array
+console.log(array); // prints [a','b','c']
+
+// .join() // 
+console.log(array.join(" ")); // prints new string of array's elements spaced out - a b c
+
+// .reverse() //
+console.log(array.reverse());   // prints reverse of array - ['c','b','a']

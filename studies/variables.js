@@ -77,7 +77,8 @@ if(city === 'Harvey'){
  * pinned to the code block in which they're declared/assigned.  Constants are not hoisted 
  * to the top of their enclosing block of code.
  * 
- * Hoisting 
+ * Hoisting with var within block or local scopes will be treated as if var was declared at the top 
+ * of the block or local scope(if declared inside a function).
  */
 
 function day(weather){

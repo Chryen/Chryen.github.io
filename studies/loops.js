@@ -25,7 +25,8 @@ for(var i = array.length - 1; i > -1; i--){      // sets a starting point, endin
 // 4. For-in Loop - designed for iterating/looping over Objects //
 var person = { nameFirst: 'Chris', nameLast: 'Nguyen' };
 for(var key in person){                     // retrieve those keys to get values from the person Object
-    console.log([key]);
+    console.log([key]);                     // prints [nameFirst] => [nameLast]
+    console.log(person[key]);               // prints Chris => Nguyen
 }
 
 /*
