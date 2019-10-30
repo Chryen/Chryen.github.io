@@ -49,7 +49,7 @@ add(2,5);   // 2. 2, 5 are arguments
 /*
  * As seen above, calling our function is simple.  We can type the name of our
  * function followed by arguments. ex (2,5).  These arguments or values will be
- * used in our function to return us a brand new value.
+ * used in our function to optionally take input and return a value.
  */
 // 5. We can specify the inputs through the arguments
 var x = add;  // 4. Assigning a function to a variable
@@ -83,3 +83,27 @@ function closure(){
     return funcVariable;
 }
 
+/**
+ * Difference between function declaration and function exression
+ */
+
+// Function Declaration //
+alert(foo()); // alerts 5
+function foo(){
+    return 5;
+}
+/**
+ * A function declaration is loaded/hoisted before any code is executed.  Just as variable
+ * declarations must begin with var, function declarations must begin with function..
+ */
+ 
+// Function Expression //
+alert(foo()); // ERROR!
+var foo = function(){
+    return 5;
+}
+/**
+ * A function expression is loaded only when the interpreter reaches that line of code. 
+ * Since function expressions are not hoisted, they can retain a copy of the local variables
+ * from the scope where they were defined.
+ */ 
