@@ -39,7 +39,7 @@ function dominantDirection(text) {
         return script ? script.direction : "none";  // return script.direction if script is true else "none"
     }).filter(({name}) => name !== "none");  // filters countBy function so name does not equal none
     if (counted.length === 0) return "ltr";  // if length of counted equals 0 return ;tr
-    return counted.reduce((a, b) => a.count > b.count ? a : b).name;    // returns counted reduced by a or b
+    return counted.reduce((a, b) => a.count > b.count ? a : b).name;    // returns counted reduced by a or ba`````
 }
 
 // /////////////////////////////////////////////////////////////////////////////

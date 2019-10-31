@@ -76,9 +76,7 @@ if(city === 'Harvey'){
  * As mentioned before in the constants section, constants are block scoped.  This means they are
  * pinned to the code block in which they're declared/assigned.  Constants are not hoisted 
  * to the top of their enclosing block of code.
- * 
- * Hoisting with var within block or local scopes will be treated as if var was declared at the top 
- * of the block or local scope(if declared inside a function).
+ *
  */
 
 function day(weather){
@@ -96,6 +94,12 @@ function day(weather){
     }
     // msg not available here because it's scoped to the if-else block
 }
+
+/**
+ * Hoisting with var: 
+ * Hoisting with var within block or local scopes will be treated as if var was declared at the top 
+ * of the block or local scope(if declared inside a function).
+ */
 
 
 
