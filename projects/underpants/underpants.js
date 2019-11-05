@@ -522,6 +522,15 @@ _.extend = function(object){
     }
     return object;  // return object
 }
+/*_.extend = function(object1, ...objects){
+    for(let i = 0; i < objects.length; i++){
+        for(let key in objects[i]){
+            let currentObjectInLoop = objects[i];
+            object1[key] = currentObjectInLoop[key];
+        }
+    }
+    return object1;
+}*/
 
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
